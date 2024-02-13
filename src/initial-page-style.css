@@ -1,18 +1,48 @@
-.home-content {
-    margin-top: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20vw;
+@font-face {
+    font-family: khiara;
+    src: url("./khiara.ttf");
 }
 
-.left {
+@font-face {
+    font-family: mogent;
+    src: url("./Mogent.otf");
+}
+
+.title {
+    color: #b45309;
+    text-align: center;
+    font-family: khiara;
+    font-size: 4.2rem;
+}
+
+.description {
+    font-family: mogent;
+    margin-top: -28px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.home-content {
+    margin-top: 48px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 8vh;
+    align-items: center;
 }
 
 .image {
-    width: 50vh;
+    width: min(90%, 480px);
+}
+
+.order-btn {
+    appearance: none;
+    outline: none;
+    border: none;
+    padding: 14px 24px;
+    margin-top: 14px;
+    background-color: #d97706;
+
+    color: white;
+    font-family: mogent;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
 }

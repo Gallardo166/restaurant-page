@@ -19,7 +19,7 @@ const loadContactPage = function() {
         homeIcon.src = Home;
 
         const telephoneNumber = document.createElement("p");
-        const instagramAccount = document.createElement("p");
+        const instagramAccount = document.createElement("a");
         const address = document.createElement("p");
  
         const telephoneContainer = document.createElement("div");
@@ -35,11 +35,21 @@ const loadContactPage = function() {
             phoneIcon.classList.add("icon");
             instagramIcon.classList.add("icon");
             homeIcon.classList.add("icon");
+
+            telephoneNumber.classList.add("contact-text");
+            instagramAccount.classList.add("contact-text");
+            address.classList.add("contact-text");
+
+            document.querySelector("#contact").classList.add("underlined");
+            document.querySelector("#menu").classList.remove("underlined");
+            document.querySelector("#home").classList.remove("underlined");
         };
        
         const addText = function() {
             telephoneNumber.textContent = "000000000";
             instagramAccount.textContent = "@juragan_kuotie";
+            instagramAccount.href = "https://www.instagram.com/juragan_kuotie/";
+            instagramAccount.setAttribute("target", "_blank");
             address.textContent = "North Jakarta, Indonesia";
         };
 

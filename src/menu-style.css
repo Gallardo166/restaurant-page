@@ -1,5 +1,5 @@
 .container, .item-container {
-    border: 1px solid black;
+    border: 2px solid #b45309;
 }
 
 .menu-content {
@@ -16,20 +16,33 @@
     gap: 1.8rem;
 }
 
-.item-container {
-    height: 50vh;
-}
-
 .item-image {
-    border: 1px solid black;
-    height: 50%
+    width: 100%;
 }
 
 .item-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-description {
     padding-left: 1rem;
+    font-family: mogent;
+    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+    margin-top: -8px;
 }
 
 .item-title {
+    color: #b45309;
     text-align: center;
     text-wrap: wrap;
+    font-size: 2.4rem;
+    font-family: khiara;
+}
+
+.item-price {
+    font-family: mogent;
+    align-self: flex-end;
+    margin-right: 12px;
 }

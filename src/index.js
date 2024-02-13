@@ -1,6 +1,7 @@
 import loadHomePage from "./initial-page";
 import loadMenuPage from "./menu-page";
 import loadContactPage from "./contact-page";
+import "./style.css";
 
 const header = (function() {
     const homeButton = document.querySelector("#home");

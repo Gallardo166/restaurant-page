@@ -1,5 +1,7 @@
 import "./menu-style.css";
 import clearPage from "./clear-page";
+import kuotiePanggang from "./kuotie-panggang.jpeg";
+import kuotieRebus from "./kuotie-rebus.jpeg";
 
 const loadMenuPage = function() {
     const content = document.querySelector("#content");
@@ -8,9 +10,10 @@ const loadMenuPage = function() {
         const menuContent = document.createElement("div");
         const container = document.createElement("div");
 
-        const createItem = function(name, description, price) {
+        const createItem = function(name, description, price, source) {
             const itemContainer = document.createElement("div");
-            const itemImage = document.createElement("div");
+            const itemImage = new Image();
+            itemImage.src = source;
             const itemInformation = document.createElement("div");
             const itemTitle = document.createElement("h1");
             const itemDescription = document.createElement("p");
@@ -25,6 +28,10 @@ const loadMenuPage = function() {
                 itemTitle.classList.add("item-title");
                 itemDescription.classList.add("item-description");
                 itemPrice.classList.add("item-price");
+
+                document.querySelector("#menu").classList.add("underlined");
+                document.querySelector("#home").classList.remove("underlined");
+                document.querySelector("#contact").classList.remove("underlined");
             };
 
             const addText = function() {
@@ -49,8 +56,8 @@ const loadMenuPage = function() {
         appendChild();
         };
 
-    createItem("Roasted Kuotie", "Five pieces of pork-filled crispy goodness.", "Rp 40k");
-    createItem("Steamed Kuotie", "Five pieces of pork-filled delicate goodness.", "Rp 36k")
+    createItem("Roasted Kuotie", "Five pieces of pork-filled crispy goodness.", "Rp 40k", kuotiePanggang);
+    createItem("Steamed Kuotie", "Five pieces of pork-filled delicate goodness.", "Rp 36k", kuotieRebus)
     };
 
     clearPage();

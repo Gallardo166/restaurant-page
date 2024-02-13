@@ -1,8 +1,25 @@
+.contact-content {
+    padding: 28px 16px 0 16px;
+}
+
 .contact-container {
     display: flex;
+    align-items: center;
     gap: 16px;
+}
+
+a {
+    margin: none;
+    padding: none;
 }
 
 .icon {
     width: 30px;
+    filter: invert(30%) sepia(94%) saturate(940%) hue-rotate(358deg) brightness(97%) contrast(95%);
+}
+
+.contact-text {
+    font-family: mogent;
+    letter-spacing: 1px;
+    color: #b45309;
 }
