@@ -1,0 +1,11 @@
+#content {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20vw;
+}
+
+.image {
+    width: 50vh;
+}
