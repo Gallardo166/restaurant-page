@@ -1,0 +1,35 @@
+.container, .item-container {
+    border: 1px solid black;
+}
+
+.menu-content {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-container {
+    width: min(600px, 80%);
+    padding: 2rem;
+    display: grid;
+    grid-template: 1fr / repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.8rem;
+}
+
+.item-container {
+    height: 50vh;
+}
+
+.item-image {
+    border: 1px solid black;
+    height: 50%
+}
+
+.item-information {
+    padding-left: 1rem;
+}
+
+.item-title {
+    text-align: center;
+    text-wrap: wrap;
+}

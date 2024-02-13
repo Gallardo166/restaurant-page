@@ -1,10 +1,12 @@
 import Kuotie from "./kuotie.jpg";
 import "./initial-page-style.css";
+import clearPage from "./clear-page";
 
 const loadHomePage = function() {
-    let content = document.querySelector("#content");
+    const content = document.querySelector("#content");
 
     const createElements = function() {
+        const homeContent = document.createElement("div");
         const leftSide = document.createElement("div");
         const leftTop = document.createElement("div");
         const title = document.createElement("h1");
@@ -17,6 +19,7 @@ const loadHomePage = function() {
         image.src = Kuotie;
 
         const addClass = function() {
+            homeContent.classList.add("home-content");
             leftSide.classList.add("left");
             leftTop.classList.add("left-top");
             title.classList.add("title");
@@ -35,8 +38,9 @@ const loadHomePage = function() {
         }
 
         const appendChild = function() {
-            content.appendChild(leftSide);
-            content.appendChild(rightSide);
+            content.appendChild(homeContent);
+            homeContent.appendChild(leftSide);
+            homeContent.appendChild(rightSide);
 
             leftSide.appendChild(leftTop);
             leftSide.appendChild(leftBottom);
@@ -53,6 +57,7 @@ const loadHomePage = function() {
 
     };
 
+    clearPage();
     createElements();
 };
 

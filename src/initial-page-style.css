@@ -1,9 +1,16 @@
-#content {
+.home-content {
     margin-top: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20vw;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8vh;
 }
 
 .image {
